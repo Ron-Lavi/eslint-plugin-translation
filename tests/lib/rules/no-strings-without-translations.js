@@ -30,7 +30,7 @@ ruleTester.run('no-strings-without-translations', rule, {
     import React from 'react';
     const __ = str => str;
     const component = () => (
-      <div><p>{__('hello world')}</p></div>
+      <div><p>{__('hello world')}</p><p>(</p></div>
   );`,
   ],
 
