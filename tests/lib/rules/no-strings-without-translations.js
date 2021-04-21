@@ -30,7 +30,7 @@ ruleTester.run('no-strings-without-translations', rule, {
     import React from 'react';
     const __ = str => str;
     const component = () => (
-      <p>{__('hello world')}</p>
+      <div><p>{__('hello world')}</p></div>
   );`,
   ],
 
@@ -38,7 +38,7 @@ ruleTester.run('no-strings-without-translations', rule, {
     {
       code: `import React from 'react';
       const component = () => (
-        <p>hello world</p>
+        <div><p>hello world</p></div>
     );`,
       errors: [
         {
