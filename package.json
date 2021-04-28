@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-translation",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "find all strings that have no translations",
   "keywords": [
     "eslint",
