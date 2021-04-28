@@ -29,18 +29,28 @@ ruleTester.run('no-strings-without-translations', rule, {
     `
     import React from 'react';
     const __ = str => str;
-    const component = () => (
-      <div><p>{__('hello world')}</p><p>(</p></div>
-  );`,
+    const component = () => {
+      const a = __('some-text')
+      return(
+        <div><p>{__('hello world')}</p><p>(</p></div>
+      );
+    }`,
   ],
 
   invalid: [
     {
       code: `import React from 'react';
-      const component = () => (
-        <div><p>hello world</p></div>
-    );`,
+      const component = () => {
+        const a = 'some-text'
+        return(
+          <div><p>hello world</p></div>
+        );
+      }`,
       errors: [
+        {
+          message: '"some-text" should be translated',
+          type: 'VariableDeclarator',
+        },
         {
           message: '"hello world" should be translated',
           type: 'JSXElement',
