@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-translation",
-  "version": "0.0.12",
+  "version": "0.0.14",
   "description": "find all strings that have no translations",
   "keywords": [
     "eslint",
@@ -8,12 +8,9 @@
     "eslint-plugin"
   ],
   "author": "Ron Lavi",
-  "main": "lib/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "mocha tests --recursive"
-  },
-  "dependencies": {
-    "requireindex": "~1.1.0"
   },
   "devDependencies": {
     "eslint": "^7.1.0",
